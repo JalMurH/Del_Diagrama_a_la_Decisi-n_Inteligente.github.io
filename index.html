@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infografía: Ecosistema Tecnológico con IA</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 350px;
+            }
+        }
+        .flow-line {
+            position: absolute;
+            background-color: #0d9488;
+            z-index: 0;
+        }
+        .flow-line-h {
+            height: 4px;
+        }
+        .flow-line-v {
+            width: 4px;
+        }
+        .arrow-right {
+            width: 0;
+            height: 0;
+            border-top: 8px solid transparent;
+            border-bottom: 8px solid transparent;
+            border-left: 8px solid #0d9488;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800">
+
+    <!-- Palette: Energetic & Playful (#0d9488, #f59e0b, #ef4444, #3b82f6, #6366f1) -->
+
+    <div class="container mx-auto p-4 md:p-8">
+
+        <header class="text-center mb-12">
+            <h1 class="text-4xl md:text-6xl font-black text-teal-600 mb-2">Del Diagrama a la Decisión Inteligente</h1>
+            <p class="text-lg md:text-xl text-slate-600 max-w-3xl mx-auto">Un ecosistema automatizado que transforma ideas en conocimiento accionable mediante IA.</p>
+        </header>
+
+        <main class="space-y-12">
+
+            <!-- Flowchart Section -->
+            <section class="bg-white rounded-lg shadow-lg p-6 md:p-8">
+                <h2 class="text-3xl font-bold text-teal-600 mb-2 text-center">El Flujo del Proceso Completo</h2>
+                <p class="text-center text-slate-500 mb-8">Visualiza cómo cada componente se conecta para crear un ciclo de valor continuo.</p>
+                <div class="relative min-h-[600px] md:min-h-[300px] flex flex-col md:flex-row justify-between items-center gap-8 md:gap-0">
+                    
+                    <!-- Flow Lines -->
+                    <div class="flow-line flow-line-h hidden md:block" style="left: 12.5%; width: 25%; top: 50%; transform: translateY(-50%);"></div>
+                    <div class="arrow-right hidden md:block" style="left: 37.5%; top: 50%; transform: translate(-8px, -50%);"></div>
+                    <div class="flow-line flow-line-h hidden md:block" style="left: 37.5%; width: 25%; top: 50%; transform: translateY(-50%);"></div>
+                    <div class="arrow-right hidden md:block" style="left: 62.5%; top: 50%; transform: translate(-8px, -50%);"></div>
+                    <div class="flow-line flow-line-h hidden md:block" style="left: 62.5%; width: 25%; top: 50%; transform: translateY(-50%);"></div>
+                    <div class="arrow-right hidden md:block" style="left: 87.5%; top: 50%; transform: translate(-8px, -50%);"></div>
+                    <!-- Vertical lines for mobile -->
+                    <div class="flow-line flow-line-v block md:hidden" style="top: 12.5%; height: 12.5%; left: 50%; transform: translateX(-50%);"></div>
+                    <div class="flow-line flow-line-v block md:hidden" style="top: 37.5%; height: 12.5%; left: 50%; transform: translateX(-50%);"></div>
+                    <div class="flow-line flow-line-v block md:hidden" style="top: 62.5%; height: 12.5%; left: 50%; transform: translateX(-50%);"></div>
+
+
+                    <!-- Step 1 -->
+                    <div class="w-full md:w-1/4 flex flex-col items-center z-10">
+                        <div class="bg-amber-400 text-white rounded-full w-16 h-16 flex items-center justify-center text-3xl font-bold mb-4 shadow-md">1</div>
+                        <h3 class="font-bold text-lg text-center">Diagramación</h3>
+                        <p class="text-center text-sm text-slate-600">El usuario modela el proceso UPN, generando un archivo Markdown.</p>
+                    </div>
+                    <!-- Step 2 -->
+                    <div class="w-full md:w-1/4 flex flex-col items-center z-10">
+                        <div class="bg-red-500 text-white rounded-full w-16 h-16 flex items-center justify-center text-3xl font-bold mb-4 shadow-md">2</div>
+                        <h3 class="font-bold text-lg text-center">Generación IA</h3>
+                        <p class="text-center text-sm text-slate-600">La IA procesa el Markdown y crea Casos de Uso estructurados.</p>
+                    </div>
+                    <!-- Step 3 -->
+                    <div class="w-full md:w-1/4 flex flex-col items-center z-10">
+                        <div class="bg-blue-500 text-white rounded-full w-16 h-16 flex items-center justify-center text-3xl font-bold mb-4 shadow-md">3</div>
+                        <h3 class="font-bold text-lg text-center">Documentación</h3>
+                        <p class="text-center text-sm text-slate-600">Cada Caso de Uso se vincula a Decisiones de Arquitectura (ADRs).</p>
+                    </div>
+                    <!-- Step 4 -->
+                    <div class="w-full md:w-1/4 flex flex-col items-center z-10">
+                        <div class="bg-indigo-500 text-white rounded-full w-16 h-16 flex items-center justify-center text-3xl font-bold mb-4 shadow-md">4</div>
+                        <h3 class="font-bold text-lg text-center">Retroalimentación</h3>
+                        <p class="text-center text-sm text-slate-600">El sistema aprende y se convierte en una base de conocimiento consultable.</p>
+                    </div>
+                </div>
+            </section>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                
+                <!-- Phase 2 Chart -->
+                <div class="bg-white rounded-lg shadow-lg p-6 md:p-8">
+                    <h3 class="text-2xl font-bold text-red-500 mb-2">Fase 2: Generación de Artefactos por IA</h3>
+                    <p class="text-slate-600 mb-4">La IA interpreta los diagramas y los convierte en artefactos de desarrollo estandarizados. Esto asegura consistencia y acelera el ciclo de vida del proyecto.</p>
+                    <div class="chart-container h-64 md:h-80">
+                        <canvas id="artefactosChart"></canvas>
+                    </div>
+                </div>
+
+                <!-- Phase 3 Chart -->
+                <div class="bg-white rounded-lg shadow-lg p-6 md:p-8">
+                    <h3 class="text-2xl font-bold text-blue-500 mb-2">Fase 3: Trazabilidad de Decisiones</h3>
+                    <p class="text-slate-600 mb-4">Cada Caso de Uso está respaldado por un historial de decisiones (ADRs), creando una auditoría completa del porqué detrás de cada implementación técnica.</p>
+                    <div class="chart-container h-64 md:h-80">
+                        <canvas id="trazabilidadChart"></canvas>
+                    </div>
+                </div>
+
+            </div>
+            
+            <!-- Phase 4 Chart -->
+            <section class="bg-white rounded-lg shadow-lg p-6 md:p-8">
+                <h3 class="text-2xl font-bold text-indigo-500 mb-2 text-center">Fase 4: El Ciclo de Aprendizaje Continuo</h3>
+                <p class="text-slate-600 mb-6 text-center max-w-2xl mx-auto">Toda la información retroalimenta al agente de IA. Con cada proyecto, su capacidad para ofrecer respuestas contextualizadas y precisas aumenta, convirtiéndolo en un activo invaluable.</p>
+                <div class="chart-container h-72 md:h-96 max-w-4xl">
+                    <canvas id="aprendizajeChart"></canvas>
+                </div>
+            </section>
+
+            <!-- Benefits Section -->
+            <section>
+                <h2 class="text-3xl font-bold text-teal-600 mb-8 text-center">Beneficios Clave del Ecosistema</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                        <div class="text-5xl mb-4">⚙️</div>
+                        <h4 class="font-bold text-xl mb-2">Automatización</h4>
+                        <p class="text-slate-600">Reduce drásticamente el tiempo entre el levantamiento de requisitos y la especificación técnica.</p>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                        <div class="text-5xl mb-4">📋</div>
+                        <h4 class="font-bold text-xl mb-2">Consistencia</h4>
+                        <p class="text-slate-600">Asegura que todos los artefactos de desarrollo sigan un formato y calidad uniformes.</p>
+                    </div>
+                     <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                        <div class="text-5xl mb-4">🔗</div>
+                        <h4 class="font-bold text-xl mb-2">Trazabilidad</h4>
+                        <p class="text-slate-600">Ofrece una visión clara desde la idea inicial hasta la decisión de arquitectura final.</p>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                        <div class="text-5xl mb-4">🧠</div>
+                        <h4 class="font-bold text-xl mb-2">Conocimiento Vivo</h4>
+                        <p class="text-slate-600">Crea una base de conocimiento que aprende y mejora con cada interacción y proyecto.</p>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <footer class="text-center mt-12 pt-8 border-t border-slate-200">
+            <p class="text-slate-500">&copy; 2025 Infografía de Proceso Tecnológico. Visualización generada para una presentación de idea.</p>
+        </footer>
+
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            
+            const wrapLabel = (label, maxLength = 16) => {
+                if (label.length <= maxLength) {
+                    return label;
+                }
+                const words = label.split(' ');
+                const lines = [];
+                let currentLine = '';
+                for (const word of words) {
+                    if ((currentLine + word).length > maxLength) {
+                        lines.push(currentLine.trim());
+                        currentLine = '';
+                    }
+                    currentLine += word + ' ';
+                }
+                lines.push(currentLine.trim());
+                return lines;
+            };
+
+            const tooltipTitleCallback = (tooltipItems) => {
+                const item = tooltipItems[0];
+                let label = item.chart.data.labels[item.dataIndex];
+                if (Array.isArray(label)) {
+                    return label.join(' ');
+                } else {
+                    return label;
+                }
+            };
+            
+            const sharedChartOptions = {
+                maintainAspectRatio: false,
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: 'bottom',
+                        labels: {
+                            font: {
+                                family: 'Inter',
+                            }
+                        }
+                    },
+                    tooltip: {
+                        callbacks: {
+                            title: tooltipTitleCallback
+                        },
+                        titleFont: { family: 'Inter' },
+                        bodyFont: { family: 'Inter' }
+                    }
+                }
+            };
+
+            // Chart 1: Artefactos Generados por IA
+            const artefactosCtx = document.getElementById('artefactosChart').getContext('2d');
+            new Chart(artefactosCtx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['Casos de Uso', 'Historias de Usuario', 'Especificaciones Técnicas'],
+                    datasets: [{
+                        label: 'Distribución de Artefactos',
+                        data: [65, 25, 10],
+                        backgroundColor: ['#ef4444', '#f59e0b', '#3b82f6'],
+                        borderColor: '#ffffff',
+                        borderWidth: 4,
+                        hoverOffset: 8
+                    }]
+                },
+                options: { ...sharedChartOptions }
+            });
+
+            // Chart 2: Trazabilidad de Decisiones (ADRs por Caso de Uso)
+            const trazabilidadCtx = document.getElementById('trazabilidadChart').getContext('2d');
+            new Chart(trazabilidadCtx, {
+                type: 'bar',
+                data: {
+                    labels: ['CU-001: Gestión de Usuarios', 'CU-002: Proceso de Compra', 'CU-003: Módulo de Reportes', 'CU-004: Integración de Pagos'].map(l => wrapLabel(l)),
+                    datasets: [{
+                        label: 'ADRs Críticos',
+                        data: [2, 3, 1, 4],
+                        backgroundColor: '#3b82f6',
+                    }, {
+                        label: 'ADRs de Soporte',
+                        data: [5, 4, 6, 5],
+                        backgroundColor: '#6366f1',
+                    }]
+                },
+                options: {
+                    ...sharedChartOptions,
+                    scales: {
+                        x: {
+                            stacked: true,
+                            grid: { display: false }
+                        },
+                        y: {
+                            stacked: true,
+                            beginAtZero: true,
+                            title: {
+                                display: true,
+                                text: 'Número de ADRs'
+                            }
+                        }
+                    }
+                }
+            });
+
+            // Chart 3: Curva de Aprendizaje de la IA
+            const aprendizajeCtx = document.getElementById('aprendizajeChart').getContext('2d');
+            new Chart(aprendizajeCtx, {
+                type: 'line',
+                data: {
+                    labels: ['Inicio Proyecto', 'Hito 1', 'Hito 2', 'Fase Beta', 'Lanzamiento', 'Post-Lanzamiento'],
+                    datasets: [{
+                        label: 'Precisión Contextual de la IA',
+                        data: [40, 55, 72, 85, 91, 96],
+                        fill: true,
+                        backgroundColor: 'rgba(13, 148, 136, 0.1)',
+                        borderColor: '#0d9488',
+                        tension: 0.4,
+                        pointBackgroundColor: '#0d9488',
+                        pointRadius: 5,
+                        pointHoverRadius: 7
+                    }]
+                },
+                options: {
+                    ...sharedChartOptions,
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            max: 100,
+                            title: {
+                                display: true,
+                                text: 'Precisión (%)'
+                            },
+                            ticks: {
+                                callback: function(value) {
+                                    return value + '%'
+                                }
+                            }
+                        }
+                    },
+                    plugins: {
+                        ...sharedChartOptions.plugins,
+                        legend: {
+                            display: false
+                        }
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
